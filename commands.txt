@@ -1,0 +1,24 @@
+composer require laravel/ui
+php artisan ui bootstrap --auth
+npm i & npm run dev
+npm run watch
+php artisan make:model Channel -mc
+composer require livewire/livewire
+php artisan livewire:publish --config
+php artisan make:livewire Channel\EditChannel
+php artisan make:policy ChannelPolicy
+composer require intervention/image
+php artisan vendor:publish --provider="Intervention\Image\ImageServiceProviderLaravelRecent"
+php artisan storage:link
+
+// using dataabse queue driver
+php artisan queue:table
+php artisan migrate
+composer require pbmedia/laravel-ffmpeg:*
+php artisan vendor:publish --provider="ProtoneMedia\LaravelFFMpeg\Support\ServiceProvider"
+php artisan make:command VideoEncode --command=video-encode:start
+
+
+php artisan make:job createThumbnailFromVideo
+// making queue in env file databse instead of sync
+php artisan queue:work --tries=2
