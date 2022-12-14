@@ -11,7 +11,6 @@
                 </div>
                 <div class="col-md-8">
                     <p>{{$this->video->processing_percentage}}%</p>
-                </div>
                 <form wire:submit.prevent='update'>
                     <div class="form-group">
                         <label for="title">Title</label>

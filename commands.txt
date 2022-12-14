@@ -18,6 +18,8 @@ composer require pbmedia/laravel-ffmpeg:*
 php artisan vendor:publish --provider="ProtoneMedia\LaravelFFMpeg\Support\ServiceProvider"
 php artisan make:command VideoEncode --command=video-encode:start
 
+php artisan route:clear
+
 
 php artisan make:job createThumbnailFromVideo
 // making queue in env file databse instead of sync
