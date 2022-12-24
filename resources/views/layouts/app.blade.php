@@ -39,9 +39,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a href="{{route('video.all')}}" class="nav-link">All videos</a>
-                        </li>
+                        @auth
+                            <li class="nav-item">
+                                <a href="{{route('video.all',['channel' => auth()->user()->channel])}}" class="nav-link">All videos</a>
+                            </li>
+                        @endauth
                     </ul>
 
                     <!-- Right Side Of Navbar -->

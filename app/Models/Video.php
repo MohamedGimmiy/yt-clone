@@ -21,9 +21,10 @@ class Video extends Model
 
             return  '/videos/'  .$this->uid . '/' . $this->thumbnail_image;
         }
-
         return '/videos/'. 'default.png';
     }
+
+
 
     public function channel()
     {

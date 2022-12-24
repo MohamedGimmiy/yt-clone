@@ -1,4 +1,6 @@
-<div>
+<div @if ($video->processing_percentage <100)
+    wire:poll
+@endif >
     {{-- Close your eyes. Count to one. That is how long forever feels. --}}
 
     <div class="container">
