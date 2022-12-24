@@ -1,6 +1,8 @@
 <div>
     <div class="container">
         <div class="row justify-content-center text-center d-block">
+            @if ($videos->count())
+
             <div class="col-md-12">
                 @foreach ($videos as $video)
                     <div class="card my-2">
@@ -32,6 +34,9 @@
                 @endforeach
             </div>
                 {{$videos->links()}}
+            @else
+            <h1>No videos uploaded</h1>
+            @endif
         </div>
     </div>
 </div>
