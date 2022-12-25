@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -14,6 +15,13 @@ class Video extends Model
     public function getRouteKeyName()
     {
         return 'uid';
+    }
+
+
+    function getUploadedDateAttribute()
+    {
+        $d = new Carbon($this->created_at);
+        return $d->toFormattedDateString();
     }
 
     public function getThumbnailAttribute(){
