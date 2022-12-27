@@ -52,6 +52,7 @@ class Voting extends Component
                 'user_id' => auth()->id()
             ]);
             $this->likeActive = true;
+            $this->disableDislike();
         }
         $this->emit('load_values');
     }
@@ -68,8 +69,20 @@ class Voting extends Component
             $this->video->dislikes()->create([
                 'user_id' => auth()->id()
             ]);
+            $this->disablelike();
             $this->dislikeActive = true;
         }
         $this->emit('load_values');
+    }
+
+    public function disableDislike()
+    {
+        Dislike::where('user_id', auth()->id())->where('video_id', $this->video->id)->delete();
+        $this->dislikeActive = false;
+    }
+    public function disablelike()
+    {
+        Like::where('user_id', auth()->id())->where('video_id', $this->video->id)->delete();
+        $this->likeActive = false;
     }
 }
