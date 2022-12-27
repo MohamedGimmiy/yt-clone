@@ -48,4 +48,19 @@ class Video extends Model
     {
         return $this->hasMany(Dislike::class,'video_id');
     }
+
+    public function didUserLikeVideo()
+    {
+        return $this->likes()->where('user_id' , auth()->id())->exists();
+    }
+
+    public function didUserDisLikeVideo()
+    {
+        return $this->dislikes()->where('user_id' , auth()->id())->exists();
+    }
+
+
+
+
+
 }
