@@ -43,6 +43,7 @@ class Video extends Model
     {
         return $this->hasMany(Like::class,'video_id');
     }
+
     public function dislikes()
     {
         return $this->hasMany(Dislike::class,'video_id');

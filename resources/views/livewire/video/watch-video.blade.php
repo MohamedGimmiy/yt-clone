@@ -34,7 +34,7 @@
                             <p class="gray-text">{{$video->views}} views. {{$video->uploaded_date}}</p>
                         </div>
                         <div>
-                            <livewire:video.voting :vido="$video" />
+                            <livewire:video.voting :video="$video" />
                         </div>
                     </div>
                 </div>
