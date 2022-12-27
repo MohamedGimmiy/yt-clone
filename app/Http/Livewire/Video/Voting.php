@@ -9,6 +9,8 @@ use Livewire\Component;
 
 class Voting extends Component
 {
+    protected $listeners = ['load_values' => '$refresh'];
+
     public $video;
     public $likes;
     public $dislikes;
@@ -51,6 +53,7 @@ class Voting extends Component
             ]);
             $this->likeActive = true;
         }
+        $this->emit('load_values');
     }
 
     public function dislike()
@@ -67,5 +70,6 @@ class Voting extends Component
             ]);
             $this->dislikeActive = true;
         }
+        $this->emit('load_values');
     }
 }
