@@ -18,6 +18,8 @@ class Voting extends Component
     public function mount(Video $video)
     {
         $this->video = $video;
+        $this->checkIfLiked();
+        $this->checkIfDisLiked();
     }
 
     public function render()
@@ -26,6 +28,14 @@ class Voting extends Component
         $this->dislikes = $this->video->dislikes()->count();
         return view('livewire.video.voting')
         ->extends('layouts.app');
+    }
+    public function checkIfLiked()
+    {
+        $this->video->didUserLikeVideo() ? $this->likeActive = true: $this->likeActive = false;
+    }
+    public function checkIfDisLiked()
+    {
+        $this->video->didUserDisLikeVideo() ? $this->dislikeActive = true: $this->dislikeActive = false;
     }
 
     public function like()
