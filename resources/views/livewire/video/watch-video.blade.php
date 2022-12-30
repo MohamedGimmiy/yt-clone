@@ -40,8 +40,14 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <livewire:channel.channel-info :channel="$video->channel"></livewire:channel.channel-info>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+        </div>
     </div>
    </div>
    @push('scripts')
