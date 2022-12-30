@@ -20,7 +20,7 @@ body{
 
 
 
-.sub-btn{
+.sub-btn-active{
     text-align: center;
     align-items: center;
     font-size: 14px;
@@ -34,13 +34,13 @@ body{
     color: #606060;
 }
 
-.sub-btn:hover, .sub-btn:focus{
+.sub-btn-active:hover, .sub-btn-active:focus{
     background-color: #f9f9f9;
     border: none;
     color: #606060;
 }
 
-.sub-btn-active{
+.sub-btn{
     height: 36px;
     width: 114px;
     font-size: 14px;
@@ -51,9 +51,10 @@ body{
     color: white;
 }
 
-.sub-btn-active:hover, .sub-btn-active:focus{
+.sub-btn:hover, .sub-btn:focus{
     background: red;
     border: none;
+    color: white;
 }
 
 
