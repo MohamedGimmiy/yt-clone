@@ -6,9 +6,10 @@
    <div class="container-fluid">
     <div class="row">
         <div class="col-md-12  p-0">
-            <div class="video-container">
-                <video id="yt-video" controls preload="auto" wire:ignore
-                class="video-js vjs-fill vjs-styles-defaults vjs-big-play-centered" data-setup="{}">
+            <div class="video-container" wire:ignore>
+                <video id="yt-video" controls preload="auto"
+                class="video-js vjs-fill vjs-styles-defaults vjs-big-play-centered" data-setup="{}"
+                poster="{{asset('videos/' . $video->uid . '/' . $video->thumbnail_image)}}">
                     <source src="{{asset('videos/' . $video->uid . '/' . $video->processed_file)}}" type="application/x-mpegURL">
                         <p class="vjs-no-js">
                             To view this video please enable JavaScript, and consider upgrading to a
