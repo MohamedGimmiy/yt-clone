@@ -6,6 +6,7 @@
 body{
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
+    background-color: white;
 }
 .video-container{
     width: 100%;
@@ -16,3 +17,54 @@ body{
 .gray-text{
     color: #909090;
 }
+
+
+
+.sub-btn{
+    text-align: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0% 2px;
+    height: 36px;
+    width: 114px;
+    border-radius: 0;
+    border: none;
+    background-color: #f9f9f9;
+    color: #606060;
+}
+
+.sub-btn:hover, .sub-btn:focus{
+    background-color: #f9f9f9;
+    border: none;
+    color: #606060;
+}
+
+.sub-btn-active{
+    height: 36px;
+    width: 114px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 0;
+    border: none;
+    background-color: red;
+    color: white;
+}
+
+.sub-btn-active:hover, .sub-btn-active:focus{
+    background: red;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

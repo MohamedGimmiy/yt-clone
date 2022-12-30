@@ -4,12 +4,12 @@
             <img src="{{asset('/images/' . $channel->image)}}" class="rounded-circle" alt="">
             <div class="ml-2">
                 <h4>{{$channel->name}}</h4>
-                <p class="gray-text text-sm">1000 subscribers</p>
+                <p class="gray-text text-sm">{{$channel->subscribers()}} subscribers</p>
             </div>
         </div>
         <div>
-            <button class="btn lg text-uppercase btn-secondary">
-                Subscribe
+            <button class="btn lg text-uppercase btn-secondary {{$userSubscribed ? 'sub-btn-active' : 'sub-btn'}}">
+                {{$userSubscribed ? 'Subscribed' : 'Subscribe'}}
             </button>
         </div>
     </div>
