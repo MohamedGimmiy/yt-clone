@@ -6,8 +6,8 @@
 
     <div class="d-flex justify-content-end algin-items-center">
         @if ($body)
-            <a href="" >Cancel</a>
-            <a href="" class="mx-2 btn btn-secondary ">COMMENT</a>
+            <a href="" wire:click.prevent='resetForm'>Cancel</a>
+            <a href="" class="mx-2 btn btn-secondary " wire:click.prevent='addComment'>COMMENT</a>
         @endif
     </div>
 </div>
