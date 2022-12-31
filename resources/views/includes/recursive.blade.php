@@ -10,7 +10,6 @@
       {{$comment->body}}
       @if ($comment->replies->count())
         <a href="" @click.prevent="open=!open">{{$comment->replies->count()}} replies</a>
-
         <div x-show="open">
 
             @include('includes.recursive', ['comments' => $comment->replies])

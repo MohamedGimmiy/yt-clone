@@ -47,6 +47,7 @@
                 </div>
             </div>
             <hr>
+            <livewire:comment.new-comment :video='' :video="$video"></livewire:comment.new-comment>
             <livewire:comment.all-comments :video="$video"></livewire:comment.all-comments>
 
         </div>
