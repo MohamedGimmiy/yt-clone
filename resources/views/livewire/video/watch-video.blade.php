@@ -47,6 +47,8 @@
                 </div>
             </div>
             <hr>
+            <livewire:comment.all-comments :video="$video"></livewire:comment.all-comments>
+
         </div>
         <div class="col-md-4">
         </div>
