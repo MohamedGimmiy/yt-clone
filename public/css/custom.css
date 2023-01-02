@@ -88,6 +88,10 @@ body{
     border: none;
 }
 
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
 
 
 

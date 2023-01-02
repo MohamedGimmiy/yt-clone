@@ -12,12 +12,6 @@
         </div>
     </form>
 
-
-
-
-
-
-
     <div class="row my-3">
         @if (!$channels->count())
             <p>You are not subscribed to any channel !</p>
