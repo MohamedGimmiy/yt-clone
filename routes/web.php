@@ -6,10 +6,18 @@ use App\Http\Livewire\Video\EditVideo;
 use App\Http\Livewire\Video\WatchVideo;
 use App\Http\Livewire\Video\CreateVideo;
 use App\Http\Controllers\ChannelController;
-
+use App\Models\Channel;
 
 Route::get('/', function () {
-    return view('welcome');
+    // if logged in -- channels that i subscribed to
+    if(Auth::check()){
+        $channels = Auth::user()->subscribedChannels()->with('videos')->get()->pluck('videos');
+        dd($channels);
+    } else{
+        $channels = Channel::get()->pluck('videos');
+    }
+
+    return view('welcome', compact('channels'));
 });
 
 Auth::routes();
