@@ -2,6 +2,22 @@
 
 @section('content')
 <div class="container">
+
+    <form action="/search" method="GET">
+        @csrf
+        @method('GET')
+        <div class="d-flex algin-items-center my-3">
+            <input type="text" name="query" id="query" class="form-control" placeholder="Search">
+            <button type="submit" class="search-btn" > <i class="material-icons">search</i></button>
+        </div>
+    </form>
+
+
+
+
+
+
+
     <div class="row my-3">
         @if (!$channels->count())
             <p>You are not subscribed to any channel !</p>

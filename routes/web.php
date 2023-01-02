@@ -6,6 +6,7 @@ use App\Http\Livewire\Video\EditVideo;
 use App\Http\Livewire\Video\WatchVideo;
 use App\Http\Livewire\Video\CreateVideo;
 use App\Http\Controllers\ChannelController;
+use App\Http\Controllers\SearchController;
 use App\Models\Channel;
 
 Route::get('/', function () {
@@ -41,3 +42,4 @@ Route::middleware('auth')->group(function(){
 
 
 Route::get('/watch/{video}', WatchVideo::class)->name('video.watch');
+Route::get('/search/', [SearchController::class, 'search'])->name('search');

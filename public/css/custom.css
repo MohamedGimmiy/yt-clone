@@ -79,7 +79,14 @@ body{
 }
 
 
+.search-btn{
+    border: none;
+    background-color: transparent;
+}
 
+.search-btn:focus{
+    border: none;
+}
 
 
 
