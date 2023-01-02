@@ -12,7 +12,6 @@ Route::get('/', function () {
     // if logged in -- channels that i subscribed to
     if(Auth::check()){
         $channels = Auth::user()->subscribedChannels()->with('videos')->get()->pluck('videos');
-        dd($channels);
     } else{
         $channels = Channel::get()->pluck('videos');
     }

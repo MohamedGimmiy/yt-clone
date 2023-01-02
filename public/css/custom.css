@@ -69,7 +69,14 @@ body{
 }
 
 
-
+.card-link{
+    color: #6d7174;
+    text-decoration: none;
+}
+.card-link:hover{
+    color: #363739;
+    text-decoration: none;
+}
 
 
 
