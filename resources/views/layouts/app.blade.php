@@ -76,7 +76,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{route('channel.edit', ['channel' => Auth::user()->channel])}}">
+                                    <a class="dropdown-item" href="{{route('channel.index', ['channel' => Auth::user()->channel])}}">
                                         {{Auth::user()->channel->name}}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
