@@ -22,14 +22,13 @@
                         <a style="text-decoration: none;" href="{{route('video.watch' , $video)}}" class="card-link">
 
                             <div class="carb mb-4" style="width:333px; border:none;">
-                                <img class="card-img-top" src="{{asset($video->thumbnail)}}" alt="Card image cap"
-                                style="height: 174px; width:333px">
+                                @include('includes.videoThumbnail')
 
                                 <div class="card-body">
-                                    <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center mt-2">
                                         <img src="{{asset('/images/' . $video->channel->image)}}" height="40px"
-                                        class="rounded-circle" alt="">
-                                        <h4 class="ml-3">{{$video->title}}</h4>
+                                        class="rounded-circle mr-5" alt="" style="margin-right: 10px">
+                                        <h4 class="ml-5">{{$video->title}}</h4>
                                     </div>
                                 </div>
                                 <p class="text-gray mt-4 font-weight-bold" style="line-height: 0.2px">{{$video->channel->name}}</p>

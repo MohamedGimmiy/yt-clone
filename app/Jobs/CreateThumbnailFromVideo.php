@@ -15,9 +15,6 @@ class CreateThumbnailFromVideo implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-
-
-
     public $video;
     /**
      * Create a new job instance.

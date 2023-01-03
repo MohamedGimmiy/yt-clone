@@ -23,4 +23,4 @@ php artisan route:clear
 
 php artisan make:job createThumbnailFromVideo
 // making queue in env file databse instead of sync
-php artisan queue:work --tries=2
+php artisan queue:listen --tries=2
