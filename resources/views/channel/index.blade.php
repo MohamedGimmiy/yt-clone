@@ -10,8 +10,8 @@
 <div class="container">
     <div class="d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center">
-            <img src="{{asset('/images/' . $channel->image)}}" class="rounded-circle mr-3" height="130px">
-            <div>
+            <img src="{{asset( $channel->picture)}}" class="rounded-circle mr-3" height="130px" width="130px">
+            <div style="margin-left: 10px">
                 <h3>{{$channel->name}}</h3>
                 <p>{{$channel->subscribers()}} Subscribers</p>
 
